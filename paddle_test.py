@@ -12,9 +12,9 @@ from transformers import DFineForObjectDetection, AutoImageProcessor
 from ultralytics import YOLO
 import re
 
-VIDEO_PATH = r"C:\Users\Administrator\Downloads\Paddle Test\B001_11062109_C026.mov"
-OUT_DIR = r"C:\Users\Administrator\Downloads\Paddle Test\B001_11062109_C026_highlights"
-REFERENCE_PATH = r"C:\Users\Administrator\Downloads\Paddle Test\c26.csv"
+VIDEO_PATH = r"C:\Users\Amr\Downloads\B001_11062109_C026.mov"
+OUT_DIR = r"C:\Users\Amr\Downloads\B001_11062109_C026_highlights"
+REFERENCE_PATH = r"C:\Users\Amr\Downloads\c26.csv"
 
 MANUAL_CHECK = False
 
@@ -522,6 +522,7 @@ for i, h in enumerate(highlights, start=1):
         "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", AUDIO_BITRATE,
         "-ar", str(AUDIO_SAMPLE_RATE), "-ac", str(AUDIO_CHANNELS),
+        "-r", "30",
         banner_path
     ]
     subprocess.run(banner_cmd, check=True)
