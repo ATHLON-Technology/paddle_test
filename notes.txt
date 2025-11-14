@@ -1,0 +1,1 @@
+to rotate a video: ffmpeg -i "C:\Users\Amr\Downloads\paddle\IMG_7130_highlights\final_highlights.mp4" -c copy -metadata:s:v:0 rotate=90 "C:\Users\Amr\Downloads\paddle\IMG_7130_highlights\final_highlights_rotated.mp4" 
